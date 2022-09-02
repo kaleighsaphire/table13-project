@@ -55,6 +55,10 @@ h3+form>input[type=text]{ /*making task list box taller*/
     height:100px;
 }
 
+/*LIST FORMATTING*/
+.todoItem{
+    list-style-type: none;
+}
 
 /*BUTTONS*/
 a{/*added this but it's not quite working right. can't figure out how to not overlap*/
