@@ -1,9 +1,10 @@
 /*GENERAL FONT STYLES*/
 
 body{
-    /*new font stuff after here*/
+    /*new font here*/
     font-family: 'Anybody', "sans-serif", cursive;
     background-color: rgb(136, 172, 164);
+    text-align: center; /*centering all the pages*/
     
 }
 
@@ -50,6 +51,10 @@ input{ /*added this to round all the forms and submit buttons*/
     font-family: 'Anybody', "sans-serif", cursive;
     font-style: italic;
 }
+h3+form>input[type=text]{ /*making task list box taller*/
+    height:100px;
+}
+
 
 /*BUTTONS*/
 a{/*added this but it's not quite working right. can't figure out how to not overlap*/
@@ -59,4 +64,44 @@ a{/*added this but it's not quite working right. can't figure out how to not ove
     margin-top: 15px;
     border-radius: 20px;
     text-decoration: none;
+}
+input[type=submit]{ /*added teal buttons*/
+    background-color: rgb(32, 196, 180);
+}
+input[type=text]+input[type=submit]{ /*added yellow submit*/
+    background-color: yellow;
+}
+body>a{ /*added index login color*/
+    background-color: rgb(32, 196, 180);
+}
+body>a+a{/*added index signup color*/
+    background-color: rgb(40, 220, 196);
+}
+.boxTwo>a{/*added logout color*/
+    background-color: rgb(40, 220, 196);
+    color: red;
+}
+
+/*SECTION BACKGROUNDS*/
+body>section{ /*turquoise background for login, signup & list*/
+    background-color: rgb(40, 220, 196);
+    padding: 10px 20px 200px 20px;
+    margin: auto;
+    width: 50%;
+    border-radius: 10px;
+}
+.boxOne{/*User Task List left box; turquoise*/
+    background-color: rgb(40, 220, 196);
+    width:50%;
+    margin:auto;
+    border-radius: 10px;
+    padding: 20px 20px 50px 30px;
+    
+}
+.boxTwo{/*User Task List right box; teal*/
+    background-color: rgb(32, 196, 180);
+    width:50%;
+    margin:auto;
+    border-radius: 10px;
+    padding: 20px 20px 50px 30px;
 }

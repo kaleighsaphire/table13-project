@@ -13,6 +13,7 @@
 </head>
 <body>
     <h2><%= user.userName %>'s Task List</h2><!--made this h2 and added username-->
+    <div class="boxOne"><!--adding to create colored boxes-->
     <ul>
     <% todos.forEach( el => { %>
             <li class='todoItem' data-id='<%=el._id%>'>
@@ -26,13 +27,16 @@
     </ul>
 
     <span><%= user.userName %> has <%= left %> things left to complete.</span> <!--made this span to be the same size as list items-->
+    </div>
+    <div class="boxTwo"><!--adding to create colored boxes-->
     <h3>Add New Task</h3><!--added header-->
     <form action="/todos/createTodo" method='POST'>
         <input type="text" placeholder="Text here..." name='todoItem'>
         <input type="submit">
     </form>
 
-    <a href="/logout">Logout</a>
+    <a href="/logout">LOGOUT</a>
+    </div>
 
     <script src="js/main.js"></script>
 </body>
