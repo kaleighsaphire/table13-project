@@ -9,6 +9,10 @@ const TodoSchema = new mongoose.Schema({
     type: Boolean,
     required: true,
   },
+  // Star task
+  important: {
+    type: Boolean,
+  },
   userId: {
     type: String,
     required: true,

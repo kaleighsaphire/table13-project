@@ -4,20 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Todo App</title>
     <link rel="stylesheet" href="css/style.css"><!--new font stuff after here-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anybody:wght@300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1dc221c3e6.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <h2><%= user.userName %>'s Task List</h2><!--made this h2 and added username-->
     <ul>
     <% todos.forEach( el => { %>
             <li class='todoItem' data-id='<%=el._id%>'>
+                <!-- Hightlight task -->
+                <span class='<%= el.important === true ? 'important' : 'regular'%>'><i class="fa-solid fa-star"></i></span>
                 <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
-                <span class='del'> Delete </span>
-                <span class='date'>Date Created: <%= new Date().toDateString();%> </span> 
+                <span class='date'>Date Created: <%= new Date().toDateString();%> </span>
+                <span class='del'><i class="fa-regular fa-trash-can"></i></span>
             </li>
     <% }) %>    
     </ul>

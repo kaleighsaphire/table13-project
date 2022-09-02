@@ -26,12 +26,20 @@ p{ /*added p*/
 
 
 /*ACTION STYLES*/
+/* Todo body */
 .completed{
     text-decoration: line-through;
     color: gray;
 }
 .not{
     text-decoration: underline;
+}
+/* Star body */
+.important {
+    color: rgb(234, 234, 105);
+}
+.regular{
+    color: black;
 }
 
 /*FORMS*/
