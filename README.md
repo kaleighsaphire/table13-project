@@ -1,22 +1,20 @@
-# Introduction
+# Summary
 
-A Simple ToDo App is built using the MVC Architecture, we have also implemented "authorization" so folx can sign up, customize & personalize the app 
+We created this Simple ToDo App, using MVC Architecture. We have also implemented "authorization" via email sign up, so users can customize & personalize their page. 
 
----
+<p align="center">
+<img src="https://i.imgur.com/lRemWyy.png" title="source: imgur.com" />
+</p>
 
-> Be sure to add that lovely star 😀 and fork it for your own copy
+# Created by 100Devs Table 13
 
----
-
-# Objectives
-
-- It's a beginner level app created to understand how MVC concept and logins are added
-
----
-
-# Who is this for? 
-
-- It's for beginners & intermediates with little more experience, to help understand the various aspects of building a node app with some complex features
+Kaleigh Saphire - <a href="https://github.com/kaleighsaphire" target="blank">Github Profile</a>
+Christiana - <a href="https://github.com/christianaukoli" target="blank">Github Profile</a>
+Bowie - <a href="https://github.com/sstrunks52005" target="blank">Github Profile</a>
+Saidat - <a href="https://github.com/saidatalli" target="blank">Github Profile</a>
+Cory - <a href="https://github.com/ForLoopNelson" target="blank">Github Profile</a>
+Zach - <a href="https://github.com/ZStanteen" target="blank">Github Profile</a>
+Steph - <a href="https://github.com/warnshouse" target="blank">Github Profile</a>
 
 ---
 
@@ -25,20 +23,4 @@ A Simple ToDo App is built using the MVC Architecture, we have also implemented 
 bcrypt, connect-mongo, dotenv, ejs, express, express-flash, express-session, mongodb, mongoose, morgan, nodemon, passport, passport-local, validator
 
 ---
-
-# Install all the dependencies or node packages used for development via Terminal
-
-`npm install` 
-
----
-
-# Things to add
-
-- Create a `.env` file and add the following as `key: value` 
-  - PORT: 2121 (can be any port example: 3000) 
-  - DB_STRING: `your database URI` 
- ---
- 
- Have fun testing and improving it! 😎
-
 
