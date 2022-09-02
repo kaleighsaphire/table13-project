@@ -1,10 +1,54 @@
-h1{
-    color: red;
+/*GENERAL FONT STYLES*/
+
+body{
+    /*new font stuff after here*/
+    font-family: 'Anybody', "sans-serif", cursive;
+    background-color: rgb(136, 172, 164);
+    
 }
+
+h1{ /*changed color to white*/
+    color: white; 
+    font-size: 64px;
+}
+h2{ /*added h2*/
+    color: white;
+    font-size: 45px;
+}
+h3{ /*added h3*/
+    color: black;
+    font-size: 32px;
+}
+p{ /*added p*/
+    color: white;
+    font-style: italic;
+}
+
+
+/*ACTION STYLES*/
 .completed{
     text-decoration: line-through;
     color: gray;
 }
 .not{
     text-decoration: underline;
+}
+
+/*FORMS*/
+input{ /*added this to round all the forms and submit buttons*/
+    border-radius: 20px;
+    border: none;
+    padding: 5px 10px;
+    font-family: 'Anybody', "sans-serif", cursive;
+    font-style: italic;
+}
+
+/*BUTTONS*/
+a{/*added this but it's not quite working right. can't figure out how to not overlap*/
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    margin-top: 15px;
+    border-radius: 20px;
+    text-decoration: none;
 }
