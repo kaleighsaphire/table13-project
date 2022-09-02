@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Anybody:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
+    <section><!--adding to center green box-->
     <h3>LOGIN</h3><!--changed to h3 and made capital-->
     <p>Please login by entering your email</p><!--added sentence-->
     <% if (locals.messages.errors) { %>
@@ -26,7 +27,8 @@
     <form action="/login" method="POST">
         <input type="email" name="email" placeholder="Email">
         <input type="password" name="password" placeholder="Password">
-        <input type="submit">
+        <input type="submit" value="Login"><!--added value to change label-->
     </form>
+    </section>
 </body>
 </html>

@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Anybody:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
+    <section><!--adding to center green box-->
     <h3>SIGNUP</h3><!--added h3-->
     <p>Please signup by entering your information below</p><!--added sentence-->
     <% if (locals.messages.errors) { %>
@@ -23,7 +24,8 @@
         <input type="email" name="email" placeholder="Email">
         <input type="password" name="password" placeholder="Password">
         <input type="password" name="confirmPassword" placeholder="Confirm Password">
-        <input type="submit">
+        <input type="submit" value="SignUp"><!--added value to change label-->
     </form>
+    </section>
 </body>
 </html>
