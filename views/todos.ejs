@@ -6,14 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo App</title>
     <link rel="stylesheet" href="css/style.css"><!--new font stuff after here-->
+    <link rel="stylesheet" href="css/theme.css"> <!--CSS file for color selector-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anybody:wght@300&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/1dc221c3e6.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <!-- Start of color selector -->
+    <input type="radio" id="green" name="colors" value="green" checked>
+    <input type="radio" id="dark" name="colors" value="dark">
+<input type="radio" id="red" name="colors" value="red">
+<input type="radio" id="white" name="colors" value="white">
+<input type="radio" id="yellow" name="colors" value="yellow">
+<input type="radio" id="blue" name="colors" value="blue">
+<input type="radio" id="purple" name="colors" value="purple">
+<input type="radio" id="olive" name="colors" value="olive">
+
+<div class="page-wrapper">
+  <div class="color-palette">
+    <label for="white"></label>
+    <label for="dark"></label>
+    <label for="red"></label>
+    <label for="green"></label>
+    <label for="yellow"></label>
+    <label for="blue"></label>
+    <label for="purple"></label>
+    <label for="olive"></label>
+  </div>
+  <!-- End of color selector -->
     <h2><%= user.userName %>'s Task List</h2><!--made this h2 and added username-->
-    <div class="boxOne"><!--adding to create colored boxes-->
+    <div class="boxOne "><!--adding to create colored boxes-->
     <ul>
     <% todos.forEach( el => { %>
             <li class='todoItem' data-id='<%=el._id%>'>
@@ -21,7 +44,7 @@
                 <span class='<%= el.important === true ? 'important' : 'regular'%>'><i class="fa-solid fa-star"></i></span>
                 <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
                 <span class='date'>Date Created: <%= new Date().toDateString();%> </span>
-                <span class='del'><i class="fa-regular fa-trash-can"></i></span>
+                <span class='del'><i class="fa-regular fa-trash-can"></i></span> 
             </li>
     <% }) %>    
     </ul>
@@ -39,5 +62,7 @@
     </div>
 
     <script src="js/main.js"></script>
+   
+   
 </body>
 </html>
