@@ -1,3 +1,5 @@
+const fs = require('fs')
+const path = require('path')
 const passport = require('passport')
 const validator = require('validator')
 const User = require('../models/User')
@@ -71,8 +73,16 @@ const User = require('../models/User')
     const user = new User({
       userName: req.body.userName,
       email: req.body.email,
-      password: req.body.password
+      password: req.body.password,
+      profilePic: {
+        data: fs.readFileSync(path.join(`${__dirname}/../public/img/pfp/${req.file ? req.file.originalname : 'default'}.jpg`)),
+        contentType: 'image/jpeg'
+      }
     })
+
+    if (req.file) {
+      fs.rmSync(`${__dirname}/../public/img/pfp/${req.file.originalname}.jpg`)      
+    }
   
     User.findOne({$or: [
       {email: req.body.email},

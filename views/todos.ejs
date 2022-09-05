@@ -35,6 +35,7 @@
     <label for="olive"></label>
   </div>
   <!-- End of color selector -->
+    <img id="profilePic" src="data:image/<%= user.profilePic.contentType %>;base64,<%= user.profilePic.data.toString('base64') %>"><!--profile pic-->
     <h2><%= user.userName %>'s Task List</h2><!--made this h2 and added username-->
     <div class="boxOne "><!--adding to create colored boxes-->
     <ul>
