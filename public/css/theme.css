@@ -1,0 +1,222 @@
+/* RESET STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+:root {
+  /*WHITE*/
+  --white-bg-color: #fff;
+  --white-secondary-color: rgb(247, 223, 223);
+  --white-text-color: #000;
+
+  /*DARK*/
+  --dark-bg-color: #434343;
+  --dark-text-color: #fff;
+
+  /*RED*/
+  --red-bg-color: #ce8082;
+  --red-text-color: #020202;
+
+  /*GREEN 88ACA4*/
+  --green-bg-color: rgb(136, 172, 164);
+  --green-text-color: #020202;
+
+  /*YELLOW*/
+  --yellow-bg-color: #c49208;
+  --yellow-text-color: #110d02;
+
+  /*BLUE*/
+  --blue-bg-color: #3fbedd;
+  --blue-text-color: #fff;
+
+  /*PURPLE*/
+  --purple-bg-color: #bdbdf3;
+  --purple-text-color: #29262e;
+
+  /*OLIVE*/
+  --olive-bg-color: #8b927f;
+  --olive-text-color: #f7f5e4;
+}
+
+h1,
+h2 {
+  color: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+[type="radio"] {
+  position: fixed;
+  left: -9999px;
+}
+
+label {
+  cursor: pointer;
+}
+
+/* body {
+  font: 300 20px / 1.5 "Anybody", "sans-serif", cursive;
+  font-style: italic;
+} */
+
+/* MAIN STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.page-wrapper {
+  padding: 30px 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.color-palette {
+  position: fixed;
+  top: 30px;
+  right: 15px;
+  display: grid;
+  grid-row-gap: 10px;
+  padding: 10px;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.color-palette label {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.color-palette label::before {
+  display: none;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -30px;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 2px;
+}
+
+/* body {
+  max-width: inherit;
+  padding: 0 15px;
+  margin: 0 auto;
+} */
+
+[id="white"] ~ .page-wrapper [for="white"] {
+  background: var(--white-bg-color);
+}
+
+[id="dark"] ~ .page-wrapper [for="dark"] {
+  background: var(--dark-bg-color);
+}
+
+[id="red"] ~ .page-wrapper [for="red"] {
+  background: var(--red-bg-color);
+}
+
+[id="green"] ~ .page-wrapper [for="green"] {
+  background: var(--green-bg-color);
+}
+
+[id="yellow"] ~ .page-wrapper [for="yellow"] {
+  background: var(--yellow-bg-color);
+}
+
+[id="blue"] ~ .page-wrapper [for="blue"] {
+  background: var(--blue-bg-color);
+}
+
+[id="purple"] ~ .page-wrapper [for="purple"] {
+  background: var(--purple-bg-color);
+}
+
+[id="olive"] ~ .page-wrapper [for="olive"] {
+  background: var(--olive-bg-color);
+}
+
+/* @media (max-width: 500px) {
+  .container {
+    padding: 0 80px 0 15px;
+  }
+} */
+
+/* CHECKBOX HACK STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+[type="radio"]:checked ~ .page-wrapper label::before {
+  display: block;
+}
+
+[id="white"]:checked ~ .page-wrapper {
+  color: var(--white-text-color);
+  background: var(--white-bg-color);
+}
+
+[id="white"]:checked ~ .page-wrapper [for="white"]::before {
+  background: var(--white-text-color);
+}
+
+[id="dark"]:checked ~ .page-wrapper {
+  color: var(--dark-text-color);
+  background: var(--dark-bg-color);
+}
+
+[id="dark"]:checked ~ .page-wrapper [for="dark"]::before {
+  background: var(--dark-text-color);
+}
+
+[id="red"]:checked ~ .page-wrapper {
+  color: var(--red-text-color);
+  background: var(--red-bg-color);
+}
+
+[id="red"]:checked ~ .page-wrapper [for="red"]::before {
+  background: var(--red-text-color);
+}
+
+[id="green"]:checked ~ .page-wrapper {
+  color: var(--green-text-color);
+  background: var(--green-bg-color);
+}
+
+[id="green"]:checked ~ .page-wrapper [for="green"]::before {
+  background: var(--green-text-color);
+}
+
+[id="yellow"]:checked ~ .page-wrapper {
+  color: var(--yellow-text-color);
+  background: var(--yellow-bg-color);
+}
+
+[id="yellow"]:checked ~ .page-wrapper [for="yellow"]::before {
+  background: var(--yellow-text-color);
+}
+
+[id="blue"]:checked ~ .page-wrapper {
+  color: var(--blue-text-color);
+  background: var(--blue-bg-color);
+}
+
+[id="blue"]:checked ~ .page-wrapper [for="blue"]::before {
+  background: var(--blue-text-color);
+}
+
+[id="purple"]:checked ~ .page-wrapper {
+  color: var(--purple-text-color);
+  background: var(--purple-bg-color);
+}
+
+[id="purple"]:checked ~ .page-wrapper [for="purple"]::before {
+  background: var(--purple-text-color);
+}
+
+[id="olive"]:checked ~ .page-wrapper {
+  color: var(--olive-text-color);
+  background: var(--olive-bg-color);
+}
+
+[id="olive"]:checked ~ .page-wrapper [for="olive"]::before {
+  background: var(--olive-text-color);
+}
