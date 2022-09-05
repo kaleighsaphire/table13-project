@@ -121,3 +121,13 @@ body > section {
   border-radius: 10px;
   padding: 20px 20px 50px 30px;
 }
+
+
+/*adding styling for profile image*/
+#display-image{
+  width: 300px;
+  height: 300px;
+  border: 1px solid black;
+  background-position: center;
+  background-size: cover;
+}
