@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Todo App</title>
+        <link rel="stylesheet" href="css/style.css"><!--new font stuff after here-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Anybody:wght@300&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/1dc221c3e6.js" crossorigin="anonymous"></script>
+    </head>
+<body>
+    <div class="boxTwo"><!--adding to create colored boxes-->
+        <form action="/todos/editTodo/<%= todo._id%>" method='POST'>
+            <div class="container"> 
+                <input type="text" placeholder="Enter Note" name="todoItem" class="item-input" value="<%= todo.todo %>">
+                
+                <!-- <button class="btn waves-effect waves-light white-text" type="submit" name="action">Update Note
+                    <i class="fa-solid fa-todos-medical"></i>
+                </button> -->
+                <input type="submit"> <a href="/todos" class="btn">Cancel
+                </a>
+            </div>
+        </form>
+    </div>
+</body>
