@@ -46,16 +46,16 @@ p {
 }
 
 /*FORMS*/
-/* added this to align the input to center, might need to remove*/
+/* added this to align the input to center*/
 .container { 
     display: flex;
     flex-direction: column;
     gap: 10px;
     justify-content: center;
     align-items: center;
-
+}
+/*added this to round all the forms and submit buttons*/
 input {
-  /*added this to round all the forms and submit buttons*/
   border-radius: 20px;
   border: none;
   padding: 5px 10px;
