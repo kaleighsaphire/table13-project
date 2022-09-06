@@ -11,27 +11,31 @@
     <link href="https://fonts.googleapis.com/css2?family=Anybody:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
-    <section><!--adding to center green box-->
-    <h3>SIGNUP</h3><!--added h3-->
-    <p>Please signup by entering your information below</p><!--added sentence-->
-    <% if (locals.messages.errors) { %>
-        <% messages.errors.forEach( el => { %>
-            <div class="alert alert-danger"><%= el.msg %></div>
-        <% }) %>    
-    <% } %>
+    <section class="login-page">
+        <h3>SIGNUP</h3>
+        <p>Please signup by entering your information below</p>
+        <% if (locals.messages.errors) { %>
+            <% messages.errors.forEach( el => { %>
+                <div class="alert alert-danger"><%= el.msg %></div>
+            <% }) %>    
+        <% } %>
 
-    <form action="/signup" method="POST" enctype="multipart/form-data">
-        <div class="container">
-            <input type="text" name="userName" placeholder="User Name" class="signup-input">
-            <input type="email" name="email" placeholder="Email" class="signup-input">
-            <input type="password" name="password" placeholder="Password" class="signup-input">
-            <input type="password" name="confirmPassword" placeholder="Confirm Password" class="signup-input">
-            <input type="file" id="profilePic" name="profilePic" accept="image/*"><!--file input-->
-            <input type="submit" value="SignUp"><!--added value to change label-->
-        </div>
-    </form>
+        <form action="/signup" method="POST" enctype="multipart/form-data">
+            <div class="container">
+                <input type="text" name="userName" placeholder="User Name" class="signup-input">
+                <input type="email" name="email" placeholder="Email" class="signup-input">
+                <input type="password" name="password" placeholder="Password" class="signup-input">
+                <input type="password" name="confirmPassword" placeholder="Confirm Password" class="signup-input">
+                <div class="add-pic">
+                    <span>Add a profile image:</span>
+                    <!--file input-->
+                    <input type="file" id="profilePic" name="profilePic" accept="image/*">
+                </div>
+                <input type="submit" value="SignUp"><!--added value to change label-->
+            </div>
+        </form>
     
-    <p>Have an account? <a href="/login">Login</a><!--added button for login--></p><!--added sentence-->
+        <p>Have an account? <a href="/login">Login</a></p>
     </section>
 </body>
 </html>

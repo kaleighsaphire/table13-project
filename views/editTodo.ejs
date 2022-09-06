@@ -15,6 +15,7 @@
     <div class="boxTwo"><!--adding to create colored boxes-->
         <form action="/todos/editTodo/<%= todo._id%>" method='POST'>
             <div class="container"> 
+                <h3>Edit Task</h3>
                 <input type="text" placeholder="Enter Note" name="todoItem" class="item-input" value="<%= todo.todo %>">
                 
                 <!-- <button class="btn waves-effect waves-light white-text" type="submit" name="action">Update Note

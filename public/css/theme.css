@@ -97,17 +97,11 @@ label {
   content: "";
   position: absolute;
   top: 50%;
-  left: -30px;
+  border-radius: 50%;
   transform: translateY(-50%);
   width: 10px;
   height: 2px;
 }
-
-/* body {
-  max-width: inherit;
-  padding: 0 15px;
-  margin: 0 auto;
-} */
 
 [id="white"] ~ .page-wrapper [for="white"] {
   background: var(--white-bg-color);

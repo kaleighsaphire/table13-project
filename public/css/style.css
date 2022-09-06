@@ -4,28 +4,41 @@ body {
   /*new font here*/
   font-family: "Anybody", "sans-serif", cursive;
   background-color: rgb(136, 172, 164);
-  text-align: center; /*centering all the pages*/
+  margin: 0;
+  padding: 0;
+  /* text-align: center; centering all the pages */
 }
 
 h1 {
   /*changed color to white*/
   color: white;
-  font-size: 64px;
+  font-size: 4rem;
 }
 h2 {
   /*added h2*/
-  color: white;
-  font-size: 45px;
+  color: black;
+  font-size: 3rem;
 }
 h3 {
   /*added h3*/
   color: black;
-  font-size: 32px;
+  font-size: 2rem;
 }
 p {
   /*added p*/
   color: white;
   font-style: italic;
+}
+.header {
+  display: flex;
+}
+.task-header {
+  /* doesn't work with white colour scheme  */
+  color: white; 
+  margin-left: 1%;
+}
+.date {
+  font-size: x-small;
 }
 
 /*ACTION STYLES*/
@@ -34,9 +47,7 @@ p {
   text-decoration: line-through;
   color: gray;
 }
-.not {
-  text-decoration: underline;
-}
+
 /* Star body */
 .important {
   color: rgb(234, 234, 105);
@@ -86,34 +97,16 @@ h3 + form > input[type="text"] {
 
 /*BUTTONS*/
 
-a {
-  /*added this but it's not quite working right. can't figure out how to not overlap*/
-  background-color: black;
-  color: white;
+.btn {
+  text-transform: uppercase;
   padding: 5px 10px;
   margin-top: 15px;
   border-radius: 20px;
   text-decoration: none;
 }
-input[type="submit"] {
-  /*added teal buttons*/
-  background-color: rgb(32, 196, 180);
-}
-input[type="text"] + input[type="submit"] {
-  /*added yellow submit*/
-  background-color: yellow;
-}
-body > a {
-  /*added index login color*/
-  background-color: rgb(32, 196, 180);
-}
-body > a + a {
-  /*added index signup color*/
-  background-color: rgb(40, 220, 196);
-}
+
 .logout-btn {
   /*added logout color*/
-  background-color: rgb(40, 220, 196);
   color: red;
   position: fixed;
   bottom: 0;
@@ -123,42 +116,74 @@ body > a + a {
 /*SECTION BACKGROUNDS*/
 body > section {
   /*turquoise background for login, signup & list*/
-  background-color: rgb(40, 220, 196);
-  padding: 10px 20px 200px 20px;
+  background-color: rgb(40, 220, 196, .3);
+  padding: 10px 20px 100px 20px;
   margin: auto;
   width: 50%;
+  border-radius: 10px;
+}
+.login-page {
+  margin-top: 10%;
+  text-align: center;
+}
+.task-section {
+  display: flex;
+  justify-content: space-around;
+}
+
+.todoItem {
+  display: flex;
+  justify-content: space-around;
+  background-color: rgba(226, 226, 226, 0.6);
+  margin: 5px 10px;
+  padding: 5px 0;
   border-radius: 10px;
 }
 .boxOne {
   /*User Task List left box; turquoise*/
-  background-color: rgb(40, 220, 196);
-  width: 50%;
+  background-color: rgba(226, 226, 226, 0.3);
+  width: 60%;
+  min-height: 200px;
   margin: auto;
   border-radius: 10px;
   padding: 20px 20px 50px 30px;
+  font-size: 1.5rem;
 }
 .boxTwo {
   /*User Task List right box; teal*/
-  background-color: rgb(32, 196, 180);
-  width: 50%;
+  background-color: rgba(226, 226, 226, 0.3);
+  width: 30%;
+  min-height: 200px;
   margin: auto;
   border-radius: 10px;
   padding: 20px 20px 50px 30px;
 }
 
 
-/*adding styling for profile image*/
-#display-image{
-  width: 300px;
+/*adding styling for banner image*/
+#display-image {
+  width: 100%;
   height: 300px;
-  border: 1px solid black;
   background-position: center;
   background-size: cover;
-  margin: 20px auto;
+  margin-top: -125px;
 }
+.banner-selection {
+  position: fixed;
+  top: 0;
+  right: 0px;
+}
+.banner-selection-title {
+  position: fixed;
+  top: 10px;
+  right: 230px;
+}
+
 /* removed background behind profile pic */
-#profilePic {
+.profile-image {
+  border: 1px solid white;
   border-radius: 50%;
+  margin-left: 20px;
 }
 
 /* ERROR ALERTS */

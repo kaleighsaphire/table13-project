@@ -11,27 +11,29 @@
     <link href="https://fonts.googleapis.com/css2?family=Anybody:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
-    <section><!--adding to center green box-->
-    <h3>LOGIN</h3><!--changed to h3 and made capital-->
-    <p>Please login by entering your email</p><!--added sentence-->
-    <% if (locals.messages.errors) { %>
-        <% messages.errors.forEach( el => { %>
-            <div class="alert alert-danger"><%= el.msg %></div>
-        <% }) %>    
-    <% } %>
-    <% if (locals.messages.info) { %>
-        <% messages.info.forEach( el => { %>
-            <div class="alert alert-danger"><%= el.msg %></div>
-        <% }) %>    
-    <% } %>
-    <form action="/login" method="POST">
-        <div class="container"><!--added container for styling-->
-            <input type="email" name="email" placeholder="Email" class="login-input">
-            <input type="password" name="password" placeholder="Password" class="login-input">
-            <input type="submit" value="Login"><!--added value to change label-->
+    <section class="login-page">
+        <h3>LOGIN</h3>
+        <p>Please login by entering your email</p>
+        <% if (locals.messages.errors) { %>
+            <% messages.errors.forEach( el => { %>
+                <div class="alert alert-danger"><%= el.msg %></div>
+            <% }) %>    
+        <% } %>
+        <% if (locals.messages.info) { %>
+            <% messages.info.forEach( el => { %>
+                <div class="alert alert-danger"><%= el.msg %></div>
+            <% }) %>    
+        <% } %>
+        <form action="/login" method="POST">
+            <div class="container"><!--added container for styling-->
+                <input type="email" name="email" placeholder="Email" class="login-input">
+                <input type="password" name="password" placeholder="Password" class="login-input">
+                <input type="submit" value="Login" class="btn">
+            </div>
+        </form>
+        <div>
+            <p>Don't have an account <a href="/signup">Sign up</a><!--added button for signup--></p><!--added sentence-->
         </div>
-    </form>
-    <p>Don't have an account <a href="/signup">Sign up</a><!--added button for signup--></p><!--added sentence-->
     </section>
 </body>
 </html>
