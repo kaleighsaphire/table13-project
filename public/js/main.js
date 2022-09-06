@@ -4,6 +4,18 @@ const todoComplete = document.querySelectorAll("span.completed")
 const starIcon = document.querySelectorAll("span.regular")
 const starImportant = document.querySelectorAll("span.important")
 
+const image_input = document.querySelector("#image-input");
+
+image_input.addEventListener("change", function() {
+  const reader = new FileReader();
+  reader.addEventListener("load", () => {
+    const uploaded_image = reader.result;
+    document.querySelector("#display-image").style.backgroundImage = `url(${uploaded_image})`;
+  });
+  reader.readAsDataURL(this.files[0]);
+});
+
+
 //add variable to have date added to todos.ejs this part may not be necessary -Cory
 const todoDateAdded = document.querySelectorAll("span.date")
 
