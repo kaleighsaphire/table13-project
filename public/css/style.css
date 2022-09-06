@@ -1,65 +1,72 @@
 /*GENERAL FONT STYLES*/
 
-body{
-    /*new font here*/
-    font-family: 'Anybody', "sans-serif", cursive;
-    background-color: rgb(136, 172, 164);
-    text-align: center; /*centering all the pages*/
-    
+body {
+  /*new font here*/
+  font-family: "Anybody", "sans-serif", cursive;
+  background-color: rgb(136, 172, 164);
+  text-align: center; /*centering all the pages*/
 }
 
-h1{ /*changed color to white*/
-    color: white; 
-    font-size: 64px;
+h1 {
+  /*changed color to white*/
+  color: white;
+  font-size: 64px;
 }
-h2{ /*added h2*/
-    color: white;
-    font-size: 45px;
+h2 {
+  /*added h2*/
+  color: white;
+  font-size: 45px;
 }
-h3{ /*added h3*/
-    color: black;
-    font-size: 32px;
+h3 {
+  /*added h3*/
+  color: black;
+  font-size: 32px;
 }
-p{ /*added p*/
-    color: white;
-    font-style: italic;
-    padding: 0 0 20px 0;
+p {
+  /*added p*/
+  color: white;
+  font-style: italic;
 }
-
 
 /*ACTION STYLES*/
 /* Todo body */
-.completed{
-    text-decoration: line-through;
-    color: gray;
+.completed {
+  text-decoration: line-through;
+  color: gray;
 }
-.not{
-    text-decoration: underline;
+.not {
+  text-decoration: underline;
 }
 /* Star body */
 .important {
-    color: rgb(234, 234, 105);
+  color: rgb(234, 234, 105);
 }
-.regular{
-    color: black;
+.regular {
+  color: black;
 }
 
 /*FORMS*/
-input{ /*added this to round all the forms and submit buttons*/
-    border-radius: 20px;
-    border: none;
-    padding: 5px 10px;
-    font-family: 'Anybody', "sans-serif", cursive;
-    font-style: italic;
-}
-/* added this to align the input to center*/
-.container {
+/* added this to align the input to center, might need to remove*/
+.container { 
     display: flex;
     flex-direction: column;
     gap: 10px;
     justify-content: center;
     align-items: center;
+
+input {
+  /*added this to round all the forms and submit buttons*/
+  border-radius: 20px;
+  border: none;
+  padding: 5px 10px;
+  font-family: "Anybody", "sans-serif", cursive;
+  font-style: italic;
 }
+h3 + form > input[type="text"] {
+  /*making task list box taller*/
+  height: 100px;
+}
+
 /* added this to make the input bigger  */
 .login-input,
 .signup-input{
@@ -73,57 +80,66 @@ input{ /*added this to round all the forms and submit buttons*/
 
 
 /*LIST FORMATTING*/
-.todoItem{
-    list-style-type: none;
+.todoItem {
+  list-style-type: none;
 }
 
 /*BUTTONS*/
-a{/*added this but it's not quite working right. can't figure out how to not overlap*/
-    background-color: black;
-    color: white;
-    padding: 3px 8px;
-    margin-top: 15px;
-    border-radius: 20px;
-    text-decoration: none;
+
+a {
+  /*added this but it's not quite working right. can't figure out how to not overlap*/
+  background-color: black;
+  color: white;
+  padding: 5px 10px;
+  margin-top: 15px;
+  border-radius: 20px;
+  text-decoration: none;
 }
-input[type=submit]{ /*added teal buttons*/
-    background-color: rgb(32, 196, 180);
-    padding: 10px 20px;
+input[type="submit"] {
+  /*added teal buttons*/
+  background-color: rgb(32, 196, 180);
 }
-input[type=text]+input[type=submit]{ /*added yellow submit*/
-    background-color: yellow;
-    margin-bottom: 35px;
+input[type="text"] + input[type="submit"] {
+  /*added yellow submit*/
+  background-color: yellow;
 }
-body>a{ /*added index login color*/
-    background-color: rgb(32, 196, 180);
+body > a {
+  /*added index login color*/
+  background-color: rgb(32, 196, 180);
 }
-body>a+a{/*added index signup color*/
-    background-color: rgb(40, 220, 196);
+body > a + a {
+  /*added index signup color*/
+  background-color: rgb(40, 220, 196);
 }
-.logout-btn{/*added logout color*/
-    background-color: rgb(40, 220, 196);
-    color: red;
+.boxTwo > a {
+  /*added logout color*/
+  background-color: rgb(40, 220, 196);
+  color: red;
 }
 
 /*SECTION BACKGROUNDS*/
-body>section{ /*turquoise background for login, signup & list*/
-    background-color: rgb(40, 220, 196);
-    padding: 10px 20px 200px 20px;
-    margin: auto;
-    width: 50%;
-    border-radius: 10px;
+body > section {
+  /*turquoise background for login, signup & list*/
+  background-color: rgb(40, 220, 196);
+  padding: 10px 20px 200px 20px;
+  margin: auto;
+  width: 50%;
+  border-radius: 10px;
 }
-.boxOne{/*User Task List left box; turquoise*/
-    background-color: rgb(40, 220, 196);
-    width:60%;
-    margin:auto;
-    border-radius: 10px;
-    padding: 20px 20px 50px 30px;  
+.boxOne {
+  /*User Task List left box; turquoise*/
+  background-color: rgb(40, 220, 196);
+  width: 50%;
+  margin: auto;
+  border-radius: 10px;
+  padding: 20px 20px 50px 30px;
 }
-.boxTwo{/*User Task List right box; teal*/
-    background-color: rgb(32, 196, 180);
-    width:60%;
-    margin:auto;
-    border-radius: 10px;
-    padding: 20px 20px 50px 30px;
+.boxTwo {
+  /*User Task List right box; teal*/
+  background-color: rgb(32, 196, 180);
+  width: 50%;
+  margin: auto;
+  border-radius: 10px;
+  padding: 20px 20px 50px 30px;
 }
+
