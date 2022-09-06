@@ -50,7 +50,7 @@
                 <!-- Hightlight task -->
                 <span class='<%= el.important === true ? 'important' : 'regular'%>'><i class="fa-solid fa-star"></i></span>
                 <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
-                <span class='date'>Date Created: <%= new Date().toDateString();%> </span>
+                <span class='date'>Date Created: <%= el.createdAt.toDateString();%> </span>
 
                 <span class='edit'><a href="/todos/editTodo/<%= el._id %>"<i class="fa-solid fa-pen-to-square"></i></a></span>
                 <span class='del'><i class="fa-regular fa-trash-can"></i></span>
