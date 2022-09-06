@@ -46,6 +46,14 @@ p {
 }
 
 /*FORMS*/
+/* added this to align the input to center, might need to remove*/
+.container { 
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+
 input {
   /*added this to round all the forms and submit buttons*/
   border-radius: 20px;
@@ -59,12 +67,25 @@ h3 + form > input[type="text"] {
   height: 100px;
 }
 
+/* added this to make the input bigger  */
+.login-input,
+.signup-input{
+    width: 170px;
+}
+
+.item-input{
+    padding: 20px 0 20px 10px;
+    width: 170px;
+}
+
+
 /*LIST FORMATTING*/
 .todoItem {
   list-style-type: none;
 }
 
 /*BUTTONS*/
+
 a {
   /*added this but it's not quite working right. can't figure out how to not overlap*/
   background-color: black;
@@ -121,3 +142,4 @@ body > section {
   border-radius: 10px;
   padding: 20px 20px 50px 30px;
 }
+

@@ -45,7 +45,10 @@
                 <span class='<%= el.important === true ? 'important' : 'regular'%>'><i class="fa-solid fa-star"></i></span>
                 <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
                 <span class='date'>Date Created: <%= new Date().toDateString();%> </span>
-                <span class='del'><i class="fa-regular fa-trash-can"></i></span> 
+
+                <span class='edit'><a href="/todos/editTodo/<%= el._id %>"<i class="fa-solid fa-pen-to-square"></i></a></span>
+                <span class='del'><i class="fa-regular fa-trash-can"></i></span>
+
             </li>
     <% }) %>    
     </ul>
@@ -55,11 +58,13 @@
     <div class="boxTwo"><!--adding to create colored boxes-->
     <h3>Add New Task</h3><!--added header-->
     <form action="/todos/createTodo" method='POST'>
-        <input type="text" placeholder="Text here..." name='todoItem'>
-        <input type="submit">
+        <div class="container">
+            <input type="text" placeholder="Text here..." name='todoItem' class="item-input">
+            <input type="submit">
+        </div>
     </form>
 
-    <a href="/logout">LOGOUT</a>
+    <a href="/logout" class="logout-btn">LOGOUT</a>
     </div>
 
     <script src="js/main.js"></script>

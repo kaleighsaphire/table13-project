@@ -25,10 +25,13 @@
         <% }) %>    
     <% } %>
     <form action="/login" method="POST">
-        <input type="email" name="email" placeholder="Email">
-        <input type="password" name="password" placeholder="Password">
-        <input type="submit" value="Login"><!--added value to change label-->
+        <div class="container"><!--added container for styling-->
+            <input type="email" name="email" placeholder="Email" class="login-input">
+            <input type="password" name="password" placeholder="Password" class="login-input">
+            <input type="submit" value="Login"><!--added value to change label-->
+        </div>
     </form>
+    <p>Don't have an account <a href="/signup">Sign up</a><!--added button for signup--></p><!--added sentence-->
     </section>
 </body>
 </html>
