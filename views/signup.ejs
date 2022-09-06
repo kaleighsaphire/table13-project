@@ -21,12 +21,14 @@
     <% } %>
 
     <form action="/signup" method="POST" enctype="multipart/form-data">
-        <input type="text" name="userName" placeholder="User Name">
-        <input type="email" name="email" placeholder="Email">
-        <input type="password" name="password" placeholder="Password">
-        <input type="password" name="confirmPassword" placeholder="Confirm Password">
-        <input type="file" id="profilePic" name="profilePic" accept="image/*"><!--file input-->
-        <input type="submit" value="SignUp"><!--added value to change label-->
+        <div class="container">
+            <input type="text" name="userName" placeholder="User Name" class="signup-input">
+            <input type="email" name="email" placeholder="Email" class="signup-input">
+            <input type="password" name="password" placeholder="Password" class="signup-input">
+            <input type="password" name="confirmPassword" placeholder="Confirm Password" class="signup-input">
+            <input type="file" id="profilePic" name="profilePic" accept="image/*"><!--file input-->
+            <input type="submit" value="SignUp"><!--added value to change label-->
+        </div>
     </form>
     
     <p>Have an account? <a href="/login">Login</a><!--added button for login--></p><!--added sentence-->
