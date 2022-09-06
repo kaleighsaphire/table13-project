@@ -58,6 +58,10 @@ label {
   cursor: pointer;
 }
 
+.fa-pen-to-square {
+  color: #fff;
+}
+
 /* body {
   font: 300 20px / 1.5 "Anybody", "sans-serif", cursive;
   font-style: italic;
