@@ -10,7 +10,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anybody:wght@300&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/1dc221c3e6.js" crossorigin="anonymous"></script>
+    <!-- link to font awesome cdn -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
     <!-- Start of color selector -->
@@ -40,8 +41,8 @@
 <input type="file" id="image-input" accept="image/jpeg, image/png, image/jpg">
 
 <div id="display-image"></div>
-
     <img id="profilePic" src="data:image/<%= user.profilePic.contentType %>;base64,<%= user.profilePic.data.toString('base64') %>"><!--profile pic-->
+    
     <h2><%= user.userName %>'s Task List</h2><!--made this h2 and added username-->
     <div class="boxOne "><!--adding to create colored boxes-->
     <ul>
@@ -75,7 +76,5 @@
     </div>
 
     <script src="js/main.js"></script>
-   
-   
 </body>
 </html>

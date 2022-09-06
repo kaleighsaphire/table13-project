@@ -111,10 +111,13 @@ body > a + a {
   /*added index signup color*/
   background-color: rgb(40, 220, 196);
 }
-.boxTwo > a {
+.logout-btn {
   /*added logout color*/
   background-color: rgb(40, 220, 196);
   color: red;
+  position: fixed;
+  bottom: 0;
+  right: 20px;
 }
 
 /*SECTION BACKGROUNDS*/
@@ -151,5 +154,15 @@ body > section {
   border: 1px solid black;
   background-position: center;
   background-size: cover;
+  margin: 20px auto;
+}
+/* removed background behind profile pic */
+#profilePic {
+  border-radius: 50%;
 }
 
+/* ERROR ALERTS */
+.alert {
+  font-size: 25px;
+  color:rgb(234, 234, 105);
+}
