@@ -2,7 +2,6 @@ const Todo = require('../models/Todo')
 
 module.exports = {
     getTodos: async (req,res)=>{
-        console.log(req.user)
         try{
             const todoItems = await Todo.find({userId:req.user.id})
             const itemsLeft = await Todo.countDocuments({userId:req.user.id,completed: false})
@@ -60,6 +59,33 @@ module.exports = {
             })
             console.log('Marked Regular')
             res.json('Marked Regular')
+        }catch(err){
+            console.log(err)
+        }
+    },
+    // GET form to edit todo
+    getEditTodoForm: async (req,res)=>{
+        try {
+            const id = req.params.id
+            const todo = await Todo.findById(id).exec()
+            res.render('editTodo', {
+                todo: todo,
+                user: req.user
+            })
+        } catch(err){
+            console.log(err)
+        }
+    },
+    // POST - edit note
+    editTodo: async (req, res)=>{
+        try{
+            const id = req.params.id
+            const data = req.body
+            await Todo.findByIdAndUpdate(id, {
+                todo: data.todoItem
+            }, { new: true })
+            console.log('Todo Updated')
+            res.redirect('/todos')
         }catch(err){
             console.log(err)
         }

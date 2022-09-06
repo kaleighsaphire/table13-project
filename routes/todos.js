@@ -15,6 +15,10 @@ router.put('/markImportant', todosController.markImportant)
 
 router.put('/markRegular', todosController.markRegular)
 
+router.get('/editTodo/:id', todosController.getEditTodoForm)
+
+router.post('/editTodo/:id', todosController.editTodo)
+
 router.delete('/deleteTodo', todosController.deleteTodo)
 
 module.exports = router
