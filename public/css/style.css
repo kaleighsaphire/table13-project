@@ -29,17 +29,6 @@ p {
   color: white;
   font-style: italic;
 }
-.header {
-  display: flex;
-}
-.task-header {
-  /* doesn't work with white colour scheme  */
-  color: white; 
-  margin-left: 1%;
-}
-.date {
-  font-size: x-small;
-}
 
 /*ACTION STYLES*/
 /* Todo body */
@@ -73,22 +62,6 @@ input {
   font-family: "Anybody", "sans-serif", cursive;
   font-style: italic;
 }
-h3 + form > input[type="text"] {
-  /*making task list box taller*/
-  height: 100px;
-}
-
-/* added this to make the input bigger  */
-.login-input,
-.signup-input{
-    width: 170px;
-}
-
-.item-input{
-    padding: 20px 0 20px 10px;
-    width: 170px;
-}
-
 
 /*LIST FORMATTING*/
 .todoItem {
@@ -96,21 +69,29 @@ h3 + form > input[type="text"] {
 }
 
 /*BUTTONS*/
-
 .btn {
+  cursor: pointer;
+  font-weight: bold;
   text-transform: uppercase;
   padding: 5px 10px;
   margin-top: 15px;
+  background-color: rgba(226, 226, 226, 0.8);
   border-radius: 20px;
   text-decoration: none;
+}
+.btn:hover {
+  background-color: rgb(234, 234, 105);
 }
 
 .logout-btn {
   /*added logout color*/
-  color: red;
   position: fixed;
-  bottom: 0;
+  bottom: 5px;
   right: 20px;
+}
+.logout-btn:hover {
+  background-color: rgba(226, 226, 226, 0.8);
+  color: rgb(243, 127, 127);
 }
 
 /*SECTION BACKGROUNDS*/
@@ -120,23 +101,6 @@ body > section {
   padding: 10px 20px 100px 20px;
   margin: auto;
   width: 50%;
-  border-radius: 10px;
-}
-.login-page {
-  margin-top: 10%;
-  text-align: center;
-}
-.task-section {
-  display: flex;
-  justify-content: space-around;
-}
-
-.todoItem {
-  display: flex;
-  justify-content: space-around;
-  background-color: rgba(226, 226, 226, 0.6);
-  margin: 5px 10px;
-  padding: 5px 0;
   border-radius: 10px;
 }
 .boxOne {
@@ -158,8 +122,50 @@ body > section {
   border-radius: 10px;
   padding: 20px 20px 50px 30px;
 }
-
-
+.login-page {
+  margin-top: 10%;
+  text-align: center;
+}
+.task-section {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+/* Target Item Styling */
+.header {
+  display: flex;
+}
+.task-header {
+  margin-left: 1%;
+}
+.todoItem {
+  display: flex;
+  background-color: rgba(226, 226, 226, 0.6);
+  margin: 5px 10px;
+  padding: 5px 0;
+  border-radius: 10px;
+}
+.date {
+  font-size: x-small;
+  align-content: left;
+  padding-left: 5px;
+}
+.task {
+  text-align: center;
+  flex-grow: 1;
+}
+.icon {
+  font-size: 1rem;
+  text-align: right;
+  margin: 4px;
+}
+.completed-tasks {
+  font-size: 1rem;
+}
+.item-input {
+  height: 30px;
+  width: 80%;
+}
 /*adding styling for banner image*/
 #display-image {
   width: 100%;
@@ -183,7 +189,7 @@ body > section {
 .profile-image {
   border: 1px solid white;
   border-radius: 50%;
-  margin-left: 20px;
+  margin: 10px 20px;
 }
 
 /* ERROR ALERTS */

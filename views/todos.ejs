@@ -54,27 +54,28 @@
                     <% todos.forEach( el => { %>
                             <li class='todoItem' data-id='<%=el._id%>'>
                                 <span class='date'><%= el.createdAt.toDateString();%> </span>
-                                <span class='<%= el.important === true ? 'important' : 'regular'%>'><i class="fa-solid fa-star"></i></span>
-                                <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
-                                    <span class='edit'><a href="/todos/editTodo/<%= el._id %>"<i class="fa-solid fa-pen-to-square"></i></a></span>
-                                    <span class='del'><i class="fa-regular fa-trash-can"></i></span>
+                                <span class='task <%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
+                                <span class='<%= el.important === true ? 'important icon' : 'regular icon'%>'><i class="fa-solid fa-star"></i></span>
+                                <span class='icon edit'><a href="/todos/editTodo/<%= el._id %>"<i class="fa-solid fa-pen-to-square"></i></a></span>
+                                <span class='icon del'><i class="fa-regular fa-trash-can"></i></span>
                             </li>
                     <% }) %>    
                 </ul>
                 <!-- added number of tasks left conditionals for sentence structure -->
-                <span><%= user.userName %> has <%= left %> thing<%= left > 1||left ==0?'s':'' %> left to complete.</span> <!--made this span to be the same size as list items-->
+                <span class="completed-tasks"><%= user.userName %> has <%= left %> thing<%= left > 1||left ==0?'s':'' %> left to complete.</span> <!--made this span to be the same size as list items-->
             </div>
             <div class="boxTwo">
                 <h3>Add New Task</h3><!--added header-->
                 <form action="/todos/createTodo" method='POST'>
                     <div class="container">
                         <input type="text" placeholder="Text here..." name='todoItem' class="item-input">
-                        <input type="submit">
+                        <input class="btn" type="submit">
                     </div>
                 </form>
             </div>
+            <a href="/logout" class="logout-btn btn">Logout</a>
         </section>
-        <a href="/logout" class="logout-btn btn">LOGOUT</a>
+    </div>   
 
     <script src="js/main.js"></script>
 </body>

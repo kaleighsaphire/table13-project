@@ -34,7 +34,6 @@
   --olive-bg-color: #8b927f;
   --olive-text-color: #f7f5e4;
 }
-
 h1,
 h2 {
   color: inherit;
@@ -62,15 +61,11 @@ label {
   color: #fff;
 }
 
-/* body {
-  font: 300 20px / 1.5 "Anybody", "sans-serif", cursive;
-  font-style: italic;
-} */
 
 /* MAIN STYLES
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .page-wrapper {
-  padding: 30px 0;
+  height: 100vh;
   transition: all 0.3s ease-in-out;
 }
 
