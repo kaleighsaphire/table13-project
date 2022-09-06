@@ -34,6 +34,7 @@
     <label for="purple"></label>
     <label for="olive"></label>
   </div>
+  
   <!-- End of color selector -->
     <img id="profilePic" src="data:image/<%= user.profilePic.contentType %>;base64,<%= user.profilePic.data.toString('base64') %>"><!--profile pic-->
     <h2><%= user.userName %>'s Task List</h2><!--made this h2 and added username-->
@@ -44,7 +45,7 @@
                 <!-- Hightlight task -->
                 <span class='<%= el.important === true ? 'important' : 'regular'%>'><i class="fa-solid fa-star"></i></span>
                 <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
-                <span class='date'>Date Created: <%= new Date().toDateString();%> </span>
+                <span class='date'>Date Created: <%= el.createdAt.toDateString() %>  </span>
                 <span class='del'><i class="fa-regular fa-trash-can"></i></span> 
             </li>
     <% }) %>    
